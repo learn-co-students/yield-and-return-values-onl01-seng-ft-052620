@@ -1,15 +1,9 @@
-require 'pry'
-def hello_t(array)
-  if block_given?
-    i = 0
- 
-    while i < array.length
-      yield(array[i])
-      i = i + 1
-    end
- 
-    array
-  else
-    puts "Hey! No block was given!"
+def hello(array)
+  i = 0
+  collection = []
+  while i < array.length
+    collection << yield(array[i])
+    i += 1
   end
+  collection
 end
