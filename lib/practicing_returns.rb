@@ -1,10 +1,10 @@
 require 'pry'
 
 def hello(array)
-  i = 0
-  while i < array.length
-    yield(array[i])
-    i += 1
+  index = 0
+  while index < array.length
+    yield(array[index])
+    index += 1
   end
 end
 
